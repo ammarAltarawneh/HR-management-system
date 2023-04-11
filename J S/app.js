@@ -1,5 +1,10 @@
 'use strict';
-function Employee (Id, fullName, department, level){
+
+let allEmployees = [];
+let form = document.getElementById('HR-manag');
+form.addEventListener('submit', addNewEmployee)
+
+function Employee(Id, fullName, department, level){
   this.Id = Id;
   this.fullName = fullName;
   this.department = department;
@@ -7,6 +12,23 @@ function Employee (Id, fullName, department, level){
   this.imageURL = `./assets/${this.fullName}.jpg`;
   this.salary = this.calculateSalary();
 }
+
+
+
+function addNewEmployee(event){
+  event.preventDefault();
+  let fullName = event.target.name.value;
+  let department = event.target.dropdown1.value;
+  let level = event.target.dropdown2.value;
+  let imgUrl = event.target.url.value;
+
+  let newEmployee = new Employee(fullName, department, level, imgUrl);
+  newEmployee.render()
+}
+
+
+
+
 
 Employee.prototype.calculateSalary = function() {
   let minSalary, maxSalary;
@@ -26,31 +48,15 @@ Employee.prototype.calculateSalary = function() {
 };
 
 
-Employee.prototype.render = function() {
-  document.write(`<h1>Id: ${this.Id}</h1>
-                  <p>Full name: ${this.fullName}</p>
-                  <p>Department: ${this.department}</p>
-                  <p>Salary: ${this.calculateSalary()}</p>`);
-};
+function generateId() {
+  let employeeId = '';
+  for (let i = 0; i < 4; i++) {
+    employeeId += Math.floor(Math.random() * 10);
+  }
+  return employeeId;
+}
 
-
-const ghazi = new Employee(1000, "Ghazi Samer", "Administration", "Senior");
-ghazi.render();
-
-const lana = new Employee(1001, "Lana Ali", "Finance", "Senior");
-lana.render();
-
-const tamara = new Employee(1002, "Tamara Ayoub", "Marketing", "Senior");
-tamara.render();
-
-const safi = new Employee(1003, "Safi Walid", "Administration", "Mid-Senior");
-safi.render();
-
-const omar = new Employee(1004, "Omar Zaid", "Development", "Senior");
-omar.render();
-
-const rana = new Employee(1005, "Rana Saleh", "Development", "Junior");
-rana.render();
-
-const hadi = new Employee(1006, "Hadi Ahmad", "Finance", "Mid-Senior");
-hadi.render();
+let section = document.getElementById('sec');
+let IdEl = document.createElement('p');
+IdEl.textContent ="ID: " + generateId();
+section.appendChild(IdEl);
