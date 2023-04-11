@@ -20,9 +20,50 @@
 		</nav>
     </header>
     <main>
+        
+        <form id="HR-manag">
+            <fieldset>
+                <legend> Set up your information</legend>
+           
+            <label for="name" id="name-label">Full Name:</label>
+		    <input type="text" id="name" name="name" required>
+            <br>
+            
+            <section id="sec"></section>
+
+            <label for="dropdown1">Department:</label>
+		<select id="dropdown1" name="dropdown1" >
+			<option value="" disabled selected>Select an option</option>
+			<option value="Administration">Administration</option>
+			<option value="Marketing">Marketing</option>
+			<option value="Development">Development</option>
+            <option value="Finance">Finance</option>
+		</select>
+        <br>
+        <br>
+
+        <label for="dropdown2">Level:</label>
+        <select id="dropdown2" name="dropdown2" >
+			<option value="" disabled selected>Select an option</option>
+			<option value="Junior">Junior</option>
+			<option value="Mid-Senior">Mid-Senior</option>
+			<option value="Senior">Senior</option>
+		</select>
+        <br>
+        <br>
+
+        <label for="url">Image Url:</label>
+        <input type="text" id="url" name="url" >
+        <br>
+        <br>
+
+        <button type="submit" id="submit">Submit</button>
+    </fieldset>
+    </form>
+
+
 
         <script src="./J S/app.js"></script>
-
     </main>
     <footer>
         <p>&copy; 2023 HR management system. All rights reserved.</p>
