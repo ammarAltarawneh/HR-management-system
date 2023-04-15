@@ -1,33 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/62d18b47ca.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/accounting.css">
     <title>Accounting</title>
 </head>
+
 <body>
     <header>
-        <h1><a href="#"><img src="./assets/hr management.png" alt="Logo" style="width: 100px; height: auto;  border-radius: 50%;"></a></h1>
-		<h3>HR management system</h3>
+        <h><a href="#"><img src="./assets/hr management.png" alt="Logo"
+                    style="width: 100px; height: auto;  border-radius: 50%; margin: 10%;"></a></h>
+        <h1>HR management system</h1>
         <nav>
-			<ul>
-				<li><a href="./index.html">Home</a></li>
-				<li><a href="#">Accounting</a></li>
-				<li><a href="#">Contact</a></li>
-			</ul>
-		</nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="#">Accounting</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
+
+        <table id="table"></table>
+        <script src="./J S/accounting.js"></script>
 
     </main>
     <footer>
         <p>&copy; 2023 HR management system. All rights reserved.</p>
-		<section><p2>Contact us</p2>
-            <a href="#"><i class="fa-solid fa-phone"></i></a>
-            <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+        <section id="contacts">
+            <p2>Contact us</p2>
+            <a href="#" id="contLogo"><i class="fa-solid fa-phone"></i></a>
+            <a href="#" id="contLogo"><i class="fa-brands fa-square-facebook"></i></a>
         </section>
     </footer>
 </body>
+
 </html>
