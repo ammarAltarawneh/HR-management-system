@@ -43,13 +43,13 @@ Employee.prototype.render = function () {
 
   const divEl = document.createElement('div');
   section.appendChild(divEl);
-  divEl.setAttribute('style','display: flex; flex-direction: column; align-items: center; background-color: #0E8388; width: 30%; border-radius: 10px; padding-block: 20px ;margin: 0 auto; margin-bottom: 20px')
+  divEl.setAttribute('style', 'display: flex; flex-direction: column; align-items: center; background-color: #0E8388; width: 30%; border-radius: 10px; padding-block: 20px ;margin: 0 auto; margin-bottom: 20px')
 
   let imgEl = document.createElement('img');
   divEl.appendChild(imgEl);
   imgEl.src = `./assets/${this.fullName}.jpg`;
   imgEl.alt = "Employee pic";
-  imgEl.setAttribute('style','width: 30%; height: auto;  border-radius: 50%;')
+  imgEl.setAttribute('style', 'width: 30%; height: auto;  border-radius: 50%;')
 
   let h2El2 = document.createElement('h2');
   h2El2.textContent = `Name: ${this.fullName} - ID: ${this.generateId()}`;
@@ -77,7 +77,12 @@ function addNewEmployee(event) {
 
   let newEmployee = new Employee(fullName, department, level, imgUrl);
 
+  let jsonArr = JSON.stringify(allEmployees);
+  localStorage.setItem('allEmployees',jsonArr)
+
   newEmployee.calculateSalary();
   newEmployee.generateId();
   newEmployee.render();
 }
+
+console.log(allEmployees)
