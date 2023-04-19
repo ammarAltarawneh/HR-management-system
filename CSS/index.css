@@ -30,7 +30,7 @@ h1 {
     color: #B3E5BE;
 }
 
-#HR-manag {
+#employee-Form {
     max-width: 60%;
     margin: 0 auto;
     padding: 1rem;
@@ -50,7 +50,7 @@ input,
     box-sizing: border-box;
   }
 
-  #submit {
+  #submits {
     margin-left: 33%;
     background-color: #c15f47;
     color: #ffffff;
@@ -61,6 +61,14 @@ input,
     cursor: pointer;
     width: 30%;
   }
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
 footer {
     background-color:#CBE4DE;
     height: 100px;
