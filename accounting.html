@@ -27,10 +27,29 @@
         </nav>
     </header>
     <main>
+        <div >
+            <table border="1" style="width: 60%; height: auto; margin: 10%;color: white; font-size: 1.2rem;">
+              <thead>
+                <tr>
+                  <th>Department</th>
+                  <th>#Employee</th>
+                  <th>Total Salary</th>
+                  <th>Avg Salary</th>
+                </tr>
+              </thead>
+              <tbody id="employees-container">
+                <tr id="rowAdministration"><td>Administration</td></tr>
+                <tr id="rowMarketing"><td>Marketing</td></tr>
+                <tr id="rowDevelopment"><td>Development</td></tr>
+                <tr id="rowFinance"><td>Finance</td></tr>
+              </tbody>
+              <tfoot>
+                <tr id="total"><td>Total</td></tr>
+              </tfoot>
+            </table>
+          </div>
 
-        <table id="table"></table>
-        <script src="./J S/accounting.js"></script>
-
+          <script src="./J S/accounting.js"></script>
     </main>
     <footer>
         <p>&copy; 2023 HR management system. All rights reserved.</p>

@@ -10,63 +10,73 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./CSS/index.css">
-    <title>home</title>
+    <title>HR management system</title>
+
 </head>
 
 <body>
     <header>
-        <h><a href="#"><img src="./assets/hr management.png" alt="Logo"
-                    style="width: 100px; height: auto;  border-radius: 50%; margin: 10%;"></a></h>
-        <h1>HR management system</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="./accounting.html">Accounting</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
+            <h><a href="#"><img src="./assets/hr management.png" alt="Logo"
+                        style="width: 100px; height: auto;  border-radius: 50%; margin: 10%;"></a></h>
+            <h1>HR management system</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="./accounting.html">Accounting</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
     </header>
     <main>
-
-        <form id="HR-manag">
+        <form id="employee-Form">
             <fieldset>
                 <legend> Set up your information</legend>
+                <div>
+                    <label id="name">Full Name</label>
+                    <input class="text-form" id="name" type="text" name="fname" required
+                        placeholder="Enter your name">
+                </div>
+                <div>
+                    <label for="Department ">Department </label>
+                    <select class="text-form" id="Department">
+                        <option>Administration</option>
+                        <option>Marketing</option>
+                        <option>Development</option>
+                        <option>Finance </option>
+                    </select>
+                </div>
+                <div>
+                    <label for="Department ">Level </label>
+                    <select class="text-form" id="level">
+                        <option>Junior</option>
+                        <option>Mid-Senior</option>
+                        <option>Senior</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="imgurl">Image URL</label>
+                    <input class="text-form" type="text" name="imgurl" id="imgurl" />
+                </div>
+                <button type="submit" id="submits">Submit</button>
 
-                <label for="name" id="name-label">Full Name:</label>
-                <input type="text" id="name" name="name" required>
-                <br>
-
-                <label for="dropdown1">Department:</label>
-                <select id="dropdown1" name="dropdown1">
-                    <option value="" disabled selected>Select an option</option>
-                    <option value="Administration">Administration</option>
-                    <option value="Marketing">Marketing</option>
-                    <option value="Development">Development</option>
-                    <option value="Finance">Finance</option>
-                </select>
-                <br>
-                <br>
-
-                <label for="dropdown2">Level:</label>
-                <select id="dropdown2" name="dropdown2">
-                    <option value="" disabled selected>Select an option</option>
-                    <option value="Junior">Junior</option>
-                    <option value="Mid-Senior">Mid-Senior</option>
-                    <option value="Senior">Senior</option>
-                </select>
-                <br>
-                <br>
-
-                <label for="url">Image Url:</label>
-                <input type="text" id="url" name="url">
-                <br>
-                <br>
-
-                <button type="submit" id="submit">Submit</button>
             </fieldset>
         </form>
 
-        <section id="container"></section>
+        <section id="container">
+            <div id="Administration">
+                <h2>Administration</h2>
+            </div>
+            <div id="Marketing">
+                <h2>Marketing</h2>
+            </div>
+            <div id="Development">
+                <h2>Development</h2>
+            </div>
+            <div id="Finance">
+                <h2>Finance</h2>
+            </div>
+
+        </section>
 
 
         <script src="./J S/app.js"></script>
@@ -81,6 +91,8 @@
             <a href="#" id="contLogo"><i class="fa-brands fa-square-facebook"></i></a>
         </section>
     </footer>
+
+
 </body>
 
 </html>
