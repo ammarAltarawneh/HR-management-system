@@ -18,6 +18,9 @@ function Employee(employeeId, fullName, department, level, imageURL, salary) {
 }
 
 function calculateSalary() {
+  if (allEmployees.length === 0) {
+    return 0; 
+  }
   for (let i = 0; i < allEmployees.length; i++) {
 
     if (allEmployees[i].level == "Senior") {
